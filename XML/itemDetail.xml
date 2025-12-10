@@ -1,0 +1,37 @@
+<SongDetails> 
+    <Detail> 
+        <id>1</id> 
+        <SongName>砂之曼陀羅</SongName> 
+        <Singer>Raymond Lam</Singer> 
+        <Date>2025-11-13</Date> 
+        <CoverPhoto>/img/Song/K歌之王-AIR.jpg</CoverPhoto> 
+        <VideoPath>abc.mp4</VideoPath>  
+        
+        <SongInfo> 
+            <Composer>陳可為 / 林寶</Composer> 
+            <Lyricist>黃偉文</Lyricist> 
+            <Arranger>葉澍暉 / 陳可為</Arranger> 
+            <Producer>徐浩</Producer> 
+        </SongInfo> 
+
+        <Lyrics> 
+            <Line>如能開心一秒</Line> 
+            <Line>離場所得都不算少</Line> 
+            <Line>猶如起沙堡壘 最快樂時候就拆掉</Line> 
+            <ParagraphSeparator/> 
+            <Line>花半生帶熱潮 數秒後還是會蕭條</Line> 
+            <Line>談情的意義 燦爛比起久遠 重要</Line> 
+            <ParagraphSeparator/> 
+            <Line>苦苦撐到這裏也無憾了</Line> 
+            <Line>無路可去也算過程絕妙</Line> 
+            <Line>一生一世 是世俗人自擾</Line> 
+            <ParagraphSeparator/> 
+            <Line>就算等這高峯等了十萬年</Line> 
+            <Line>完了幻象幻滅吹散難復見</Line> 
+            <Line>修幾生修到的快樂太短</Line> 
+            <Line>也賺了甜蜜的心疼 做留念</Line> 
+        </Lyrics> 
+    </Detail> 
+ 
+
+    </SongDetails> 

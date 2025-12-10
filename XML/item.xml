@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Songs> 
+    <Song> 
+        <id>1</id> 
+        <SongName>砂之曼陀羅</SongName> 
+        <Singer>Raymond Lam</Singer> 
+        <Date>2025-11-13</Date> 
+        <photo>./img/砂之曼陀羅.jpg</photo> 
+        <PageLink>music1.php?id=1</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>2</id> 
+        <SongName>手繪黑卡</SongName> 
+        <Singer>Jay Fung</Singer> 
+        <Date>2025-11-10</Date> 
+        <photo>./img/手繪黑卡.jpg</photo> 
+        <PageLink>music2.php?id=2</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>3</id> 
+        <SongName>無花無果</SongName> 
+        <Singer>Louis Cheung</Singer> 
+        <Date>2025-11-05</Date> 
+        <photo>./img/無花無果.jpg</photo> 
+        <PageLink>music3.php?id=3</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>4</id> 
+        <SongName>海</SongName> 
+        <Singer>Marf</Singer> 
+        <Date>2025-11-04</Date> 
+        <photo>./img/海.jpg</photo> 
+        <PageLink>music4.php?id=4</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>5</id> 
+        <SongName>選擇困難症</SongName> 
+        <Singer>Myth Or</Singer> 
+        <Date>2025-10-30</Date> 
+        <photo>./img/選擇困難症.jpg</photo> 
+        <PageLink>music5.php?id=5</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>6</id> 
+        <SongName>K歌之王 AIR</SongName> 
+        <Singer>Eason Chan</Singer> 
+        <Date>2025-10-23</Date> 
+        <photo>./img/K歌之王 AIR.jpg</photo> 
+        <PageLink>music6.php?id=6</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>7</id> 
+        <SongName>蝦餃</SongName> 
+        <Singer>Arvin Tsang</Singer> 
+        <Date>2025-10-23</Date> 
+        <photo>./img/蝦餃.jpg</photo> 
+        <PageLink>music7.php?id=7</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>8</id> 
+        <SongName>深層消毒</SongName> 
+        <Singer>Irene Lam</Singer> 
+        <Date>2025-10-22</Date> 
+        <photo>./img/深層消毒.jpg</photo> 
+        <PageLink>music8.php?id=8</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>9</id> 
+        <SongName>不要評論這首歌</SongName> 
+        <Singer>Gordon Flanders</Singer> 
+        <Date>2025-10-21</Date> 
+        <photo>./img/不要評論這首歌.jpg</photo> 
+        <PageLink>music9.php?id=9</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>10</id> 
+        <SongName>無心傷人</SongName> 
+        <Singer>Serrini</Singer> 
+        <Date>2025-10-20</Date> 
+        <photo>./img/無心傷人.jpg</photo> 
+        <PageLink>music10.php?id=10</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>11</id> 
+        <SongName>IRIS OUT</SongName> 
+        <Singer>Kenshi Yonezu</Singer> 
+        <Date>2025-09-24</Date> 
+        <photo>./img/IRIS OUT.jpg</photo> 
+        <PageLink>music11.php?id=11</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>12</id> 
+        <SongName>洗濯機</SongName> 
+        <Singer>岩坂 遼</Singer> 
+        <Date>2021-08-16</Date> 
+        <photo>./img/洗濯機.jpg</photo> 
+        <PageLink>music12.php?id=12</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>13</id> 
+        <SongName>Sky High</SongName> 
+        <Singer>Kizuna AI</Singer> 
+        <Date>2019-07-22</Date> 
+        <photo>./img/Sky High.jpg</photo> 
+        <PageLink>music13.php?id=13</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>14</id> 
+        <SongName>旁觀者悲</SongName> 
+        <Singer>Raymond Lam</Singer> 
+        <Date>2016-04-11</Date> 
+        <photo>./img/旁觀者悲.jpg</photo> 
+        <PageLink>music14.php?id=14</PageLink> 
+    </Song> 
+
+    <Song> 
+        <id>15</id> 
+        <SongName>PONPONPON</SongName> 
+        <Singer>Kyary Pamyu Pamyu</Singer> 
+        <Date>2011-07-20</Date> 
+        <photo>./img/PONPONPON.jpg</photo> 
+        <PageLink>music15.php?id=15</PageLink> 
+    </Song> 
+</Songs> 

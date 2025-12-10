@@ -1,0 +1,907 @@
+/* Color theme(Sky)’s URL: https://colorhunt.co/palette/f6f5f2f0ebe3f3d0d7ffefef */
+/* Color theme(Sky)’s URL:  https://colorhunt.co/palette/fbfbfbe8f9ffc4d9ffc5baff */
+
+/* Design tokens: colors */
+:root {
+  --sky-1: #dfeef7;
+  --sky-2: #d5b8d3;
+  --sky-3: #f1e8f0;
+  --border: #dde6f9;
+}
+
+
+/* Logo size */
+.nav-logo {
+  height: 56px;
+}
+
+/* Base typography, background and line-height for entire page */
+body {
+  background: var(--sky-3);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(180deg, var(--sky-2), var(--sky-1));
+  border-top: 1px solid var(--border);
+}
+
+.footer-nav a {
+  font-weight: 600;
+  color: #000;
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+/* Divider */
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  /* 深一點點 */
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Footer social media icons */
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Comining soon page */
+.cs-height {
+  display: flex;
+  height: 100vh;
+  /* Set height to full screen */
+}
+
+/* About page */
+/* General Image Styling */
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Image wrapper */
+.about-img-container {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Core Values: Card Image Box */
+.core-value-img-box {
+  width: 100%;
+  height: 100%;
+  background: #e8f9fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.core-value-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Core Values: outer wrapper (height) */
+.core-value-img-wrapper {
+  height: 280px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Home page */
+/* ==========================================================================
+   HOME.HTML — ICONS (HD, HI-FI, Listen Music, etc.)
+   Purpose:
+   - Controls the appearance of small icons used in the "Lossless" and
+     "Music Recognition" sections.
+   - Ensures consistent sizing and simple hover effects.
+========================================================================== */
+
+.tag-icon {
+  width: 42px;
+  /* Sets a consistent width for all small icons */
+  opacity: 0.9;
+  /* Slight transparency for a softer default look */
+  transition: 0.2s;
+  /* Smooth animation for hover interactions */
+}
+
+.tag-icon:hover {
+  opacity: 1;
+  /* Becomes fully opaque on hover for emphasis */
+  transform: translateY(-2px);
+  /* Small upward lift effect when hovered */
+}
+
+/* ==========================================================================
+   HOME.HTML — Carousel Smooth Slide Animation
+   Purpose:
+   - Enhances Bootstrap's default slide effect with a smoother, more natural
+     cubic-bezier transition (Material UI / Apple-like motion).
+   - Does NOT replace Bootstrap animation, only improves the movement curve.
+========================================================================== */
+
+#heroCarousel .carousel-item {
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+  /* 
+     .22, .61, .36, 1 = smooth acceleration then soft deceleration
+     A very natural high-quality motion curve
+  */
+}
+
+/* ==========================================================================
+   HOME.HTML — INFINITE SLIDER (Auto-scrolling playlist section)
+   Purpose:
+   - Creates the horizontal auto-scrolling playlist at the bottom of home.html.
+   - Uses CSS animation to loop images infinitely from right to left.
+========================================================================== */
+
+/* Outer wrapper for the entire slider section */
+.slideshow-one-line {
+  overflow: hidden;
+  /* Hides overflowing content to create seamless scroll */
+  width: 100%;
+  /* Full-width slide container */
+  padding: 40px 0;
+  /* Vertical spacing around the slider */
+  background: #fff;
+  /* White background to contrast image colors */
+}
+
+/* Scrolling track that contains all images */
+.scroll-track {
+  display: flex;
+  /* Places images in a horizontal row */
+  flex-wrap: nowrap;
+  /* Prevents line breaks — ensures continuous flow */
+  gap: 20px;
+  /* Space between playlist images */
+  width: max-content;
+  /* Track grows based on image count */
+  animation: scrollLoop 28s linear infinite;
+  /* Infinite leftward scroll animation */
+}
+
+/* Base styling for each playlist image */
+.slideshow-one-line .group img {
+  width: 220px;
+  /* Fixed width for consistent layout */
+  height: 220px;
+  /* Ensures the image remains perfectly square */
+  object-fit: cover;
+  /* Keeps the image fully filled within the square */
+  border-radius: 12px;
+  /* Rounded corners for cleaner presentation */
+  transition: transform 0.35s ease;
+  /* Smooth hover zoom animation */
+}
+
+/* Slight zoom when hovering over an image */
+.slideshow-one-line .group:hover img {
+  transform: scale(1.06);
+  /* Enlarges the image by 6% when hovered */
+}
+
+/* Center button displayed over each image */
+.overlay-btn {
+  position: absolute;
+  /* Positioned relative to its parent (.group) */
+  top: 50%;
+  /* Vertically centered */
+  left: 50%;
+  /* Horizontally centered */
+  transform: translate(-50%, -50%);
+  /* Adjusts centering */
+  padding: 8px 20px;
+  /* Button inner spacing */
+  background: rgba(0, 0, 0, 0.65);
+  /* Semi-transparent dark background */
+  color: #fff;
+  /* White text for readability */
+  border-radius: 24px;
+  /* Rounded pill-shaped button */
+  font-size: 15px;
+  /* Button text size */
+  text-decoration: none;
+  /* Removes underline */
+  opacity: 0;
+  /* Hidden until hovered */
+  pointer-events: auto;
+  /* Button remains clickable */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Fade-in and lift animation */
+  white-space: nowrap;
+}
+
+/* Smaller images on mobile screens */
+@media (max-width: 576px) {
+  .slideshow-one-line .group img {
+    width: 160px;
+    /* Mobile width */
+    height: 160px;
+    /* Mobile height */
+  }
+}
+
+/* Button appears when hovering over the group */
+.group:hover .overlay-btn {
+  opacity: 1;
+  /* Fade-in effect */
+  transform: translate(-50%, -55%);
+  /* Moves slightly upward on hover */
+}
+
+/* Each image wrapper container */
+.group {
+  position: relative;
+  /* Needed for absolute positioning of overlay-btn */
+  flex-shrink: 0;
+  /* Prevents the image from shrinking */
+}
+
+/* Infinite scrolling animation loop */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+    /* Start at initial position */
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* Moves left by half the track length */
+  }
+}
+
+/* ==========================================================================
+   UNIVERSAL CTA BUTTON (Used across home.html + other pages)
+   Purpose:
+   - Creates a consistent black pill-shaped call-to-action button.
+   - Used in "Try Now", "Learn More", "Explore", etc.
+========================================================================== */
+
+.cta-btn {
+  display: inline-block;
+  /* Inline behavior with customizable width */
+  background: #000;
+  /* Solid black background */
+  color: #fff;
+  /* White button text */
+  padding: 12px 36px;
+  /* Button size (vertical + horizontal padding) */
+  font-size: 18px;
+  /* Text size */
+  font-weight: 600;
+  /* Slightly bold font for emphasis */
+  border-radius: 40px;
+  /* Fully rounded pill shape */
+  text-decoration: none;
+  /* Removes underline */
+  transition: 0.25s ease;
+  /* Smooth hover transition */
+}
+
+/* Hover state — lighter gray background */
+.cta-btn:hover {
+  background: #777777;
+  /* Light gray to differentiate hover state */
+  color: #fff;
+  /* Keeps text white */
+  text-decoration: none;
+  /* No underline on hover */
+}
+
+/* Home — Card hover lift effect */
+.home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(18, 18, 18, 0.08);
+}
+
+.home-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Home — Explore BBBOX card image uniform height */
+.home-explore-img {
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* =========================================================================== 
+===============================================================================
+================================================================================*/
+
+/* Musicitems page */
+/* Song title style for musicitems pages */
+/* Song title */
+.article-title {
+  color: #333;
+  text-decoration: none;
+  padding: 2px 4px;
+  transition: all 0.2s ease;
+}
+
+.article-title:hover {
+  color: #000;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* =========================================================================== 
+===============================================================================
+================================================================================*/
+
+/* latestnews.html start - Scoped under .latestnews to avoid leaking styles */
+
+.latestnews {
+  --ln-accent: #ff8a00;
+  --ln-muted: #666;
+  --ln-bg: #fff;
+  --ln-section-gap: 56px;
+  /* vertical gap between sections */
+}
+
+/* predictable box-sizing */
+.latestnews *,
+.latestnews *::before,
+.latestnews *::after {
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.latestnews .nav-logo {
+  height: 56px;
+  object-fit: contain;
+}
+
+/* HERO */
+.latestnews #index.hero_section {
+  font-family: -apple-system, "Helvetica Neue", "PingFang TC",
+    "Microsoft JhengHei", "Noto Sans TC", Roboto, Arial, sans-serif;
+}
+
+.latestnews .hero .header_logo {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
+
+.latestnews .hero .header_logo img {
+  max-width: 160px;
+  height: auto;
+  display: block;
+}
+
+.latestnews .hero .title {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.latestnews .hero .container {
+  display: block;
+}
+
+.latestnews .hero .row>.col-12.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (max-width: 420px) {
+  .latestnews .hero .title {
+    font-size: 56px;
+  }
+}
+
+.latestnews .hero .subtitle {
+  font-size: 15px;
+  color: var(--ln-muted);
+  margin-bottom: 36px;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.latestnews .explore_btn {
+  display: inline-block;
+  background: linear-gradient(180deg, rgb(243, 213, 41), var(--ln-accent) 100%);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(255, 138, 0, 0.18);
+}
+
+.latestnews .explore_btn:active {
+  transform: translateY(1px);
+}
+
+/* FEATURE */
+.latestnews #feature {
+  background: var(--ln-bg);
+  padding: 72px 20px 96px;
+  position: relative;
+}
+
+.latestnews .feature-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.latestnews .feature-intro {
+  color: var(--ln-muted);
+  font-size: 16px;
+  margin-bottom: 44px;
+  line-height: 1.8;
+}
+
+.latestnews .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.latestnews .feature-image-wrap {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.latestnews .feature-image-wrap img {
+  width: 100%;
+  height: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+.latestnews .feature-label {
+  font-size: 13px;
+  color: var(--ln-muted);
+}
+
+@media (max-width: 480px) {
+  .latestnews .feature-image-wrap {
+    width: 96px;
+    height: 96px;
+  }
+
+  .latestnews .feature-image-wrap img {
+    max-width: 96px;
+    max-height: 96px;
+  }
+}
+
+/* =========================
+   SECTIONS (LIMITED, STANDARD, LOSSLESS, FAMILY)
+   All section styles consolidated and namespaced under .latestnews
+   ========================= */
+
+.latestnews .ln-sections {
+  display: block;
+}
+
+/* Apply to any of the four sections by ID or by class */
+.latestnews .ln-section,
+.latestnews #limitedtime,
+.latestnews .limitedtime_section,
+.latestnews #standard,
+.latestnews .standard_section,
+.latestnews #lossless,
+.latestnews .lossless_section,
+.latestnews #family,
+.latestnews .family_section {
+  padding: 60px 20px;
+  position: relative;
+  overflow: visible;
+  background: var(--ln-bg);
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* vertical spacing between sections */
+.latestnews .ln-sections>*+* {
+  margin-top: var(--ln-section-gap);
+}
+
+.latestnews .ln-section+.ln-section {
+  margin-top: var(--ln-section-gap);
+}
+
+/* Two-column inner grid used by all sections.
+   Left column: description (heading + bullets). Right column: plan cards.
+   justify-items:center centers each column; inner content can control alignment. */
+.latestnews .ln-section .ln-inner,
+.latestnews #limitedtime .ln-inner,
+.latestnews .standard_section .ln-inner,
+.latestnews .lossless_section .ln-inner,
+.latestnews .family_section .ln-inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* stack on small screens */
+@media (max-width: 991.98px) {
+  .latestnews .ln-section .ln-inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0 12px;
+  }
+}
+
+/* Heading */
+.latestnews .ln-section .plan_title,
+.latestnews #limitedtime .plan_title,
+.latestnews #standard .plan_title,
+.latestnews #lossless .plan_title,
+.latestnews #family .plan_title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 22px 0;
+  line-height: 1;
+  text-align: center;
+}
+
+/* LIMITEDTIME heading override */
+.latestnews #limitedtime .plan_title,
+.latestnews .limitedtime_section .plan_title {
+  color: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #ff7a00, #ffb84d);
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* STANDARD heading override */
+.latestnews #standard .plan_title,
+.latestnews .standard_section .plan_title {
+  color: #fff;
+  background: linear-gradient(90deg, #3aa0ff, #66c2ff);
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* LOSSLESS heading override */
+.latestnews #lossless .plan_title,
+.latestnews .lossless_section .plan_title {
+  color: #fff;
+  background: linear-gradient(90deg, #38e08f, #00c46b);
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* FAMILY heading override */
+.latestnews #family .plan_title,
+.latestnews .family_section .plan_title {
+  color: #fff;
+  background: linear-gradient(90deg, #8f4dff, #b37bff);
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* =========================
+   BULLETS: unified behavior and appearance
+   - Check-mark pseudo element for all lists
+   - List container is centerable (inline-block)
+   - Individual items left-aligned inside the centered block
+   ========================= */
+
+/* Generic list container for bullets */
+.latestnews .limit-list,
+.latestnews .ln-section .limit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--ln-muted);
+  /* Keep text left-aligned inside the list, but allow the list block
+     to be centered under the heading by setting display:inline-block
+     on the element that contains it (we'll set that on the .desc wrapper) */
+}
+
+/* If you use a .desc wrapper (recommended), center the list block */
+.latestnews .desc .limit-list,
+.latestnews .ln-section .limit-list-inline {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto 18px;
+  min-width: 320px;
+  /* adjust to match visual alignment with limitedtime */
+  max-width: 420px;
+}
+
+/* Individual bullet items */
+.latestnews .limit-list li,
+.latestnews .ln-section .limit-list li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 26px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Check mark pseudo element for every bullet */
+.latestnews .limit-list li:before,
+.latestnews .ln-section .limit-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #111;
+  font-weight: 700;
+  font-size: 14px;
+  transform: translateY(2px);
+}
+
+/* =========================
+   PLAN CARDS (right column)
+   unified grid and card styles for consistent layout
+   ========================= */
+
+.latestnews .plan_cards {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 560px;
+  margin-left: 0;
+  margin-right: 0;
+  justify-items: center;
+}
+
+/* allow a slightly narrower cards column if needed */
+.latestnews .plan_cards--wide {
+  max-width: 600px;
+}
+
+/* Card base */
+.latestnews .card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 14px;
+  background: var(--ln-bg);
+  box-shadow: 0 6px 18px rgba(18, 18, 18, 0.06);
+  position: relative;
+  overflow: visible;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Card inner: left content + right price. At desktop a fixed height for visual parity. */
+.latestnews .card_inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  height: 120px;
+  box-sizing: border-box;
+}
+
+/* Left content area inside card (badge + texts) */
+.latestnews .card_top {
+  flex: 1 1 auto;
+  position: relative;
+  width: 180px;
+}
+
+/* Card title (badge) */
+.latestnews .card_title {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  transform: translateY(-6px);
+  margin-bottom: 6px;
+}
+
+/* LIMITEDTIME card badge */
+.latestnews #limitedtime .card_title,
+.latestnews .limitedtime_section .card_title {
+  background: linear-gradient(90deg, #ff6a00, #ff9f4d);
+  box-shadow: 0 6px 16px rgba(255, 106, 0, 0.12);
+  color: #fff;
+}
+
+/* STANDARD card badge */
+.latestnews #standard .card_title,
+.latestnews .standard_section .card_title {
+  background: linear-gradient(90deg, #3aa0ff, #66c2ff);
+  box-shadow: 0 6px 16px rgba(58, 160, 255, 0.12);
+  color: #fff;
+}
+
+/* LOSSLESS card badge */
+.latestnews #lossless .card_title,
+.latestnews .lossless_section .card_title {
+  background: linear-gradient(90deg, #38e08f, #00c46b);
+  box-shadow: 0 6px 16px rgba(56, 224, 143, 0.1);
+  color: #fff;
+}
+
+/* FAMILY card badge */
+.latestnews #family .card_title,
+.latestnews .family_section .card_title {
+  background: linear-gradient(90deg, #8f4dff, #b37bff);
+  box-shadow: 0 6px 16px rgba(143, 77, 255, 0.1);
+  color: #fff;
+}
+
+/* Tag (small pill) */
+.latestnews .card_tag {
+  position: absolute;
+  right: -6px;
+  top: -6px;
+  background: #fff6f9;
+  color: #ff7b6f;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  box-shadow: 0 6px 12px rgba(248, 77, 125, 0.06);
+}
+
+/* Card bottom/meta row inside left area */
+.latestnews .card_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding-top: 6px;
+}
+
+/* card detail text */
+.latestnews .card_detail {
+  color: var(--ln-muted);
+  font-size: 14px;
+}
+
+/* Price (fixed to right). Use flex-shrink:0 so it doesn't collapse */
+.latestnews .card_price {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+/* hover */
+.latestnews .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(18, 18, 18, 0.08);
+}
+
+/* =========================
+   RESPONSIVE: mobile adjustments
+   ========================= */
+@media (max-width: 991.98px) {
+  .latestnews .ln-section .ln-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .latestnews .card {
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .latestnews .card_inner {
+    gap: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 14px;
+  }
+
+  .latestnews .card_title {
+    transform: translateY(0);
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .latestnews .card_tag {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+
+  .latestnews .card_bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .latestnews .card_price {
+    font-size: 20px;
+    align-self: flex-end;
+    font-weight: 800;
+  }
+
+  /* Center description and list on mobile */
+  .latestnews .desc {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  /* make plan cards fill on mobile */
+  .latestnews .plan_cards {
+    max-width: 100%;
+    justify-items: stretch;
+  }
+}
+
+/* ALIGNMENT FIXES FOR BOTH COLUMNS */
+.latestnews #limitedtime .row.align-items-center,
+.latestnews .standard_section .row.align-items-center,
+.latestnews .lossless_section .row.align-items-center,
+.latestnews .family_section .row.align-items-center {
+  justify-content: center;
+  column-gap: 60px;
+  row-gap: 28px;
+}
+
+.latestnews #limitedtime .col-lg-6,
+.latestnews .standard_section .col-lg-6,
+.latestnews .lossless_section .col-lg-6,
+.latestnews .family_section .col-lg-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.latestnews #limitedtime .desc,
+.latestnews .standard_section .desc,
+.latestnews .lossless_section .desc,
+.latestnews .family_section .desc {
+  margin: 0 auto;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* =========================================================================== 
+===============================================================================
+================================================================================*/
